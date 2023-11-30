@@ -2,7 +2,7 @@ import styled, {css} from "styled-components";
 import {MdDelete, MdDone} from "react-icons/md";
 
 const Remove = styled.div`
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   color: #dee2e6;
@@ -19,7 +19,11 @@ const TodoItemBlock = styled.div`
   align-items: center;
   padding-top: 12px;
   padding-bottom: 12px;
-  // todo: hover 했을 때 쓰레기통 아이콘이 나타나기
+  &:hover {
+    ${Remove} {
+      display: initial;
+    }
+  }
 `;
 
 const CheckCircle = styled.div`
