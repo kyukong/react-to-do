@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {useTodoState} from "../TodoContext";
 
 const TodoHeadBlock = styled.div`
   h1 {
@@ -20,19 +21,29 @@ const TodoHeadBlock = styled.div`
   border-bottom: 1px solid #e9ecef;
 `;
 
+const TasksLeft = styled.div`
+  color: #20c997;
+  font-size: 18px;
+  margin-top: 40px;
+  font-weight: bold;
+`;
+
 function TodoHead() {
     const today = new Date();
 
     const dateString = today.toLocaleString('ko-KR', {
         year: 'numeric', month: 'long', day: 'numeric'
     });
-
     const dayName = today.toLocaleString('ko-KR', {weekday: 'long'});
+
+    const todos = useTodoState();
+    const undoneTasks = todos.filter(todo => !todo.done);
 
     return (
         <TodoHeadBlock>
             <h1>{dateString}</h1>
             <div className="day">{dayName}</div>
+            <TasksLeft>할 일 {undoneTasks.length}개 남음</TasksLeft>
         </TodoHeadBlock>
     )
 }

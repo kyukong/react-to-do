@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import TodoItem from "./TodoItem";
+import {useTodoState} from "../TodoContext";
 
 const TodoListBlock = styled.div`
     flex: 1;
@@ -8,14 +9,8 @@ const TodoListBlock = styled.div`
     overflow-y: auto;
 `;
 
-const todos = [
-    {"id" : 1, "done": true, "text": "아침 산책"},
-    {"id" : 2, "done": true, "text": "오늘의 뉴스 읽기"},
-    {"id" : 3, "done": false, "text": "샌드위치 사 먹기"},
-    {"id" : 4, "done": false, "text": "리액트 공부하기"},
-]
-
 function TodoList() {
+    const todos = useTodoState();
     return (
         <TodoListBlock>
             {todos.map(todo => (
