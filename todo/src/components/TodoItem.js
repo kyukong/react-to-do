@@ -19,6 +19,7 @@ const TodoItemBlock = styled.div`
   align-items: center;
   padding-top: 12px;
   padding-bottom: 12px;
+  // todo: hover 했을 때 쓰레기통 아이콘이 나타나기
 `;
 
 const CheckCircle = styled.div`
