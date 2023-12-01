@@ -1,7 +1,7 @@
 import styled, {css} from "styled-components";
 import {MdAdd} from "react-icons/md";
 import {useState} from "react";
-import {useTodoDispatch, useTodoNextId} from "../TodoContext";
+import {useTodoDispatch, useTodoNextId} from "../../context/TodoContext";
 
 const CircleButton = styled.div`
   background: #38d9a9;
@@ -123,4 +123,4 @@ function TodoCreate() {
     )
 }
 
-export default React.memo(TodoCreate);
+export default TodoCreate;

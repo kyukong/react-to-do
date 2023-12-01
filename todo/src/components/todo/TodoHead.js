@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {useTodoState} from "../TodoContext";
+import {useTodoState} from "../../context/TodoContext";
 
 const TodoHeadBlock = styled.div`
   h1 {

@@ -1,9 +1,9 @@
-import TodoList from "./components/TodoList";
-import TodoTemplate from "./components/TodoTemplate";
+import TodoList from "./components/todo/TodoList";
+import TodoTemplate from "./components/todo/TodoTemplate";
 import {createGlobalStyle} from "styled-components";
-import TodoHead from "./components/TodoHead";
-import TodoCreate from "./components/TodoCreate";
-import {TodoProvider} from "./TodoContext";
+import TodoHead from "./components/todo/TodoHead";
+import TodoCreate from "./components/todo/TodoCreate";
+import {TodoProvider} from "./context/TodoContext";
 
 const GlobalStyle = createGlobalStyle`
   body {
