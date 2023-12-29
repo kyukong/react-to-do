@@ -5,10 +5,7 @@ import TodoHead from "./components/todo/TodoHead";
 import TodoCreate from "./components/todo/TodoCreate";
 import {TodoProvider} from "./context/TodoContext";
 import {ThemeProvider} from "./context/ThemeContext";
-import ThemeTemplate from "./components/theme/ThemeTemplate";
 import GlobalTemplate from "./components/GlobalTemplate";
-import LeftTemplate from "./components/LeftTemplate";
-import WeatherTemplate from "./components/weather/WeatherTemplate";
 
 const GlobalStyle = createGlobalStyle`
   body {
