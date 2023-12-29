@@ -21,10 +21,6 @@ function App() {
         <ThemeProvider>
             <GlobalStyle/>
             <GlobalTemplate>
-                <LeftTemplate>
-                    <WeatherTemplate>날씨</WeatherTemplate>
-                    <ThemeTemplate>테마 변경하기</ThemeTemplate>
-                </LeftTemplate>
                 <TodoProvider>
                     <TodoTemplate>
                         <TodoHead/>
